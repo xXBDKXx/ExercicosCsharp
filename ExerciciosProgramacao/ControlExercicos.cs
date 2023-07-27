@@ -15,10 +15,10 @@ namespace ExerciciosProgramacao
         public void Coletar()
         {
             Console.WriteLine("Informe um Numero: ");
-            this.Exercicio.getSetNum1 = Convert.ToDouble(Console.ReadLine());
+            this.Exercicio.getSetNum1 = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Informe outro Numero: ");
-            this.Exercicio.getSetNum2 = Convert.ToDouble(Console.ReadLine());
+            this.Exercicio.getSetNum2 = Convert.ToInt32(Console.ReadLine());
         }//Fim do Coletar
 
         public int Menu()
@@ -29,6 +29,13 @@ namespace ExerciciosProgramacao
                               "\n3.Impar Par | Positio Negativo" +
                               "\n4.Soma dos Numeros de 1 a 100" +
                               "\n5.Tabuada de ate N" +
+                              "\n6.Num1 ate Num2" +
+                              "\n7.Impares de 100 a 200" +
+                              "\n8.Soma de Dez Numeros Inteiros" +
+                              "\n9.Soma de N Valores" +
+                              "\n10.Media de N Valores" +
+                              "\n11.Menor e Maior Valores" +
+                              "\n12.Vinte Valores" +
                               "\n0.Sair " +
                               "\n\nEscolha uma das opções acima: ");
 
@@ -72,6 +79,28 @@ namespace ExerciciosProgramacao
                         Console.WriteLine("Informe um Numero: ");
                         int num = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine(this.Exercicio.TabuadaNum(num));
+                        break;
+                    case 6:
+                        Coletar();
+                        Console.WriteLine(this.Exercicio.NumUmToNumDois());
+                        break;
+                    case 7:
+                        Console.WriteLine(this.Exercicio.NumImparCemAteDuzentos());
+                        break;
+                    case 8:
+                        Console.WriteLine(this.Exercicio.SomaDeDezNumeros());
+                        break;
+                    case 9:
+                        Console.WriteLine(this.Exercicio.SomaDeNValores());
+                        break;
+                    case 10:
+                        Console.WriteLine(this.Exercicio.MediaDePares());
+                        break;
+                    case 11:
+                        Console.WriteLine(this.Exercicio.MaiorEMenorValor());
+                        break;
+                    case 12:
+                        Console.WriteLine(this.Exercicio.VinteValores());
                         break;
                     default:
                         Console.WriteLine("Opção Invalida");
